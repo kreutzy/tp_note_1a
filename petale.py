@@ -44,8 +44,8 @@ class Petale():
         return estaccroche
         
     def couleur():
-         ''' Retourne 'rouge' pour un pétale non fané
-         'marron' pour un pétale commençant à faner
+        ''' Retourne 'rouge' pour un pétale non fané
+        'marron' pour un pétale commençant à faner
         
         Parameters
         ----------
@@ -53,7 +53,7 @@ class Petale():
         Returns
         -------
         str
-            'rouge' ou 'marron'
+        'rouge' ou 'marron'
             
         Examples
         --------
