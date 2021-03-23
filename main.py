@@ -1,5 +1,6 @@
 from petale import Petale
 from fleur import Fleur
+from feuille import Feuille
 #monpetale = Petale()
 #print(monpetale.age)
 #
@@ -10,3 +11,4 @@ from fleur import Fleur
 #print(test)
 
 maFleur= Fleur()
+maFleur.couleur()

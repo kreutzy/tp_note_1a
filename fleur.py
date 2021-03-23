@@ -33,22 +33,22 @@ class Fleur:
         self.liste_petales=[]
         for i in range(10):
             self.liste_petales.append(Petale())
-        print(self.liste_petales)
+        
 
 
-    def est_fanant():
+    def est_fanant(self):
         if self.age >15 and self.age < 21:
             return True
         else:
             return False
 
-    def est_fruit():
+    def est_fruit(self):
         if self.age > 20 and self.age <31 and (self.fecondee==True):
             return True
         else:
             return False
 
-    def vieillir():
+    def vieillir(self):
         self.age += 1 # la fleur prend un jour
         # on fait vieiilir chaque pétale
         for petale in liste_petales:
@@ -62,6 +62,18 @@ class Fleur:
             self.age=31
         
 
-    def couleur():
-        pass
-    shdcjhsbd
+    def couleur(self):
+        dictionnaire_couleurs = {}
+        if self.est_fruit():
+            dictionnaire_couleurs["orange"] = 1
+        else:
+
+            nombre_petales = 0
+            for petale in self.liste_petales:
+                if petale.age <21:
+                    nombre_petales +=1
+            
+            dictionnaire_couleurs["coeur_jaune"] = 1/(1+nombre_petales)
+            dictionnaire_couleurs["couleur_des_petales"] = nombre_petales/(1+nombre_petales)
+
+        return print(dictionnaire_couleurs)

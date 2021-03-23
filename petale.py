@@ -40,7 +40,7 @@ class Petale():
         estaccroche = True
         self.age += 1
         
-        if self.age >= 20:
+        if self.age > 20:
             estaccroche = False
         return estaccroche
         
