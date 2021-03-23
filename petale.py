@@ -19,7 +19,7 @@ class Petale():
         '''
         self.age=0
         
-    def vieillir():
+    def vieillir(self):
         ''' Incrémente l'âge et teste si le pétale
         est toujours accroché
         
@@ -33,17 +33,18 @@ class Petale():
             
         Examples
         --------
-        >>>monpetale.vieillir()
-        TRUE
+        >>> monpetale = Petale()
+        >>> monpetale.vieillir()
+        True
         '''
         estaccroche = True
         self.age += 1
         
-        if self.age <20:
+        if self.age >= 20:
             estaccroche = False
         return estaccroche
         
-    def couleur():
+    def couleur(self):
         ''' Retourne 'rouge' pour un pétale non fané
         'marron' pour un pétale commençant à faner
         
@@ -57,8 +58,8 @@ class Petale():
             
         Examples
         --------
-        >>>monpetale = Petale()
-        >>>monpetale.couleur()
+        >>> monpetale = Petale()
+        >>> monpetale.couleur()
         'rouge'
         '''
         couleur_non_fane = 'rouge'
@@ -69,4 +70,6 @@ class Petale():
             return couleur_fane
         
         
-        
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
