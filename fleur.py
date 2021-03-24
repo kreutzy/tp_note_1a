@@ -28,6 +28,9 @@ class Fleur:
     '''
 
     def __init__(self):
+        """[Constructeur de la fleur]
+        Construit une fleur avec 10 pétales
+        """        
         self.age=0
         self.fecondee = False
         self.liste_petales=[]
@@ -37,12 +40,22 @@ class Fleur:
 
 
     def est_fanant(self):
+        """[indique si la fleur est en train de fâner]
+
+        Returns:
+            [bool]: [True si la fleur fane, False sinon]
+        """        
         if self.age >15 and self.age < 21:
             return True
         else:
             return False
 
     def est_fruit(self):
+        """[indique si la fleur est en fruit]
+
+        Returns:
+            [bool]: [True si la fleur est en fruit, False sinon]
+        """        
         if self.age > 20 and self.age <31 and (self.fecondee==True):
             return True
         else:
@@ -74,6 +87,12 @@ class Fleur:
         
 
     def couleur(self):
+        """[indique la couleur de la fleur selon son état de fleur ou de fruit]
+
+        Returns:
+            [dict]: [dictionnaire comprenant, si la fleur n'est pas un fruit, la valeur du "coeur_jaune" et la valeur
+            de la "couleur_des_petales", sinon (la fleur est un fruit) comprend uniquement la valeur 1 pour la couleur orange]
+        """        
         dictionnaire_couleurs = {}
         if self.est_fruit():
             dictionnaire_couleurs["orange"] = 1

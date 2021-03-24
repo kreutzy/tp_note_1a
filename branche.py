@@ -25,13 +25,22 @@ class Branche:
         self.angle = random(-90,90)
     
     def nb_branches(self):
+        """[retourne le nombre de branches filles de la branche en cours]
+
+        Returns:
+            [int]: [nombre de branches filles]
+        """        
         return len(self.liste_branches_filles)
     
     
     
     
     def nb_feuilles(self):
-        
+        """[calcule le nombre de feuilles de la branche en incluant les branches filles]
+
+        Returns:
+            [int]: [nombre total de feuilles supportées par la branche]
+        """        
         compteur_feuilles = len(self.liste_feuilles)
         
         if compteur_feuilles>0:
@@ -42,6 +51,11 @@ class Branche:
             return compteur_feuilles   
         
     def nb_fleurs(self):
+        """[calcule le nombre total de fleurs supportées par la branche]
+
+        Returns:
+            [int]: [nombre total de fleurs supportées par la branche]
+        """        
         compteur_fleurs = 0
         for fleur in self.liste_fleurs:
             if not fleur.est_fruit():
@@ -54,6 +68,11 @@ class Branche:
             return compteur_fleurs
         
     def nb_fruits(self):
+        """[calcule le nombre total de fruits supportés par la branche]
+
+        Returns:
+            [int]: [nombre total de fruits supportés par la branche]
+        """        
         compteur_fruit = 0
         for fleur in self.liste_fleurs:
             if fleur.est_fruit():
@@ -66,6 +85,14 @@ class Branche:
             return compteur_fruit
              
     def vieillir_branche(self, saison):
+        """[fait vieillir la branche d'un jour, en prenant en compte la saison]
+
+        Args:
+            saison ([int]): [0 pour hiver, 1 pour printemps, 2 pour été, 3 pour automne]
+
+        Returns:
+            [tuple]: [tuple comprenant un booléen égal à True si la branche est cassée, et le nombre de fruits sur la branche]
+        """        
         #probabilité que la branche casse
         if random() < 0.1/self.epaisseur :
             return (False, self.nb_fruits())
@@ -85,7 +112,7 @@ class Branche:
                 compteur_fruits_tombes +=1
                 self.liste_fleurs.remove(fleur)
         
-        for branche_fille in self.liste_branches_filles:
+        #for branche_fille in self.liste_branches_filles:
         
         
         if saison==1:

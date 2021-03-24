@@ -13,6 +13,6 @@ class Arbre(Branche):
         décrit l'angle, entre -90 et +90
     """    
     def __init__(self):
-        super().__init__(self)
+        super().__init__()
         self.coordonnees = (random(), random())
         self.angle = 0
