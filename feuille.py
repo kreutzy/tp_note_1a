@@ -38,7 +38,7 @@ class Feuille:
         """ 
         # Attention, l'appel à la méthode vieillir peut incrémenter séchant
         sechant_actuel = self.sechant
-        resultat_vieillir = self.vieillir()
+        resultat_vieillir = self.vieillir(0)
         # remise à l'état de l'attribut séchant en cas de vieillissement "prématuré"
         if self.sechant != sechant_actuel:
             self.sechant -= 1
