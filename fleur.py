@@ -49,9 +49,16 @@ class Fleur:
             return False
 
     def vieillir(self):
+        """[Fait vieillir la fleur]
+        
+        Returns
+        -------
+        bool:
+            True si la fleur/fruit est tombé(e)
+        """        
         self.age += 1 # la fleur prend un jour
-        # on fait vieiilir chaque pétale
-        for petale in liste_petales:
+        # on fait vieillir chaque pétale
+        for petale in self.liste_petales:
             petale.vieillir()
         #probabilité d'être butinée (donc fécondée)
         if self.age <16:
@@ -60,6 +67,10 @@ class Fleur:
         # probabilité de tomber de l'arbre
         if random < 0.01:
             self.age=31
+        if self.age >=31:
+            return True 
+        else:
+            return False
         
 
     def couleur(self):
