@@ -84,8 +84,7 @@ class Feuille:
         --------
         >>> maFeuille = Feuille()
         >>> maFeuille.couleur()
-
-        
+        'vert'        
         """        
         if self.statut() == 'vivante':
             return 'vert'
