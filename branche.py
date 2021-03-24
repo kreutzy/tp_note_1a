@@ -1,7 +1,7 @@
 from petale import Petale
 from fleur import Fleur
 from feuille import Feuille
-from random import random
+from random import random, randint
 
 class Branche:
     """[summary]
@@ -22,6 +22,7 @@ class Branche:
         self.liste_branches_filles=[]
         self.liste_fleurs=[]
         self.liste_feuilles=[Feuille()]
+        self.angle = randint()
     
     def nb_branches(self):
         pass
